@@ -3,19 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>初めてのページ</title>
+    <link rel="stylesheet" href="style.css"> <!-- style.cssの読み込み-->
+    <title>自己紹介サイト</title>
 </head>
 <body>
-    <h1>私の自己紹介</h1>
+    <header>
+        <h2>Welcome to My Page!</h2>
+    </header>
 
-    <h2>プロフィール</h2>
-    <p>田中です。</p>
+    <div class="profile_top">
+        <!--
+        divタグとclass属性の連携でcssでクラス名を指定して、
+        背景色や文字サイズなどを細かく設定できる
+        どの部分がどんな役割を持つのか、コードを見るだけで理解できる
+        同じクラス名を複数の要素に適用すれば、同じデザインを簡単に適用できる。
+        -->
+        <h1>My Profile</h1>
+        <img src="images/top_img.png" alt="top画像">
+        <!--imgタグ: Webページに写真やイラストなどの画像を表示するためのタグ。-->
+        <!--src属性: 表示するがそうファイルの置いてある場所を指定する。-->
+        <!--alt属性: 画像の説明文。この説明文は画像が表示できない場合や視覚障害のためにある。-->
+    </div>
 
-    <h2>好きな物</h2>
-    <ul>
-        <li>サッカー</li>
-        <li>プログラミング</li>
-        <li>ラーメン</li>
-    </ul>
+    <div class="profile_about">
+        <h2>About Me</h2>
+        <div class="profile_about_content">
+            <p>ここに<br>
+            自分について<br>
+            書きましょう。<br>
+            </p>
+            <!--text-align: テキストの設置方法を指定する。centerでセクション内のテキストが中央に揃う-->
+            <!--margin-bottom: 要素の下側に外側の余白を作る-->
+            <!--margin-top: 要素の上側に外側の余白を作る-->
+            <!--line-height: 行間を指定する。1.5-という値は、フォントサイズの1.5倍の高さということ。-->
+        </div>
+    </div>
+
+    <div class="profile_favorite">
+        <h2>My Favorite</h2>
+        <div class="profile_favorite_area">
+            <img src="images/favorite.jpeg" alt="favorite">
+            <p>ここにお気に入りの紹介文を書きます。</p>
+        </div>
+    </div>
+
+    <div class="profile_place">
+        <h2>Favorite Place</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d405458.2915965093!2d139.97057994748278!3d37.44553983825483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60200d991cc0aa93%3A0xb24e911473db36cb!2z56aP5bO255yM6YOh5bGx5biC!5e0!3m2!1sja!2sjp!4v1751005062991!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <!--google mapから共有を選び、地図を埋め込むからHTMLをコピーを選ぶ-->
+        <p>おすすめの理由を書きます。</p>
+    </div>
+
+    <footer></footer>
 </body>
 </html>
